@@ -16,7 +16,7 @@ exports.addSlot = async (req, res) => {
   res.json(slot);
 };
 
-// View full OPD schedule (slots + tokens)
+// View full OPD schedule 
 exports.getSchedule = async (req, res) => {
   const slots = await Slot.find({ doctorId: req.params.doctorId });
   const result = [];
